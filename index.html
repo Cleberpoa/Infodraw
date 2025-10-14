@@ -1,36 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Manutenção</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        p {
-            font-size: 1.2rem;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Infodraw Tecnologias — Em Breve</title>
+  <meta name="description" content="Infodraw Tecnologias — Assistência técnica de computadores e notebooks. Em breve." />
+  <style>
+    :root{
+      --blue: #0b63d4; /* paleta azul escolhida */
+      --gray: #6b7280; /* cinza */
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --shadow: 0 10px 30px rgba(11,99,212,0.08);
+      --radius: 16px;
+      --fw-regular: 400;
+      --fw-bold: 700;
+      --max-w: 980px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg),#eef2f8);
+      color:var(--gray);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--max-w);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:32px;
+      display:grid;
+      grid-template-columns: 220px 1fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    /* logo area (square) */
+    .logo-wrap{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+    }
+
+    .logo-box{
+      width:160px;
+      height:160px;
+      min-width:160px;
+      min-height:160px;
+      border-radius:18px;
+      background: linear-gradient(135deg, rgba(11,99,212,0.08), rgba(107,114,128,0.03));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .brand-title{font-weight:var(--fw-bold); color: #0b2460; font-size:18px}
+    .brand-sub{font-size:12px; color:var(--gray)}
+
+    /* main content */
+    .content{
+      padding:12px 6px;
+    }
+
+    h1{
+      margin:0 0 6px 0;
+      font-size:28px;
+      color: #071740;
+      letter-spacing:-0.02em;
+    }
+
+    p.lead{
+      margin:0 0 18px 0;
+      color:var(--gray);
+      font-size:15px;
+      line-height:1.45;
+    }
+
+    .coming{display:flex;gap:14px;align-items:center}
+
+    .status-pill{
+      padding:8px 12px;
+      background:linear-gradient(90deg,var(--blue),#0a5bd0);
+      color:white;
+      border-radius:999px;
+      font-weight:600;
+      font-size:13px;
+      box-shadow:0 6px 18px rgba(11,99,212,0.12);
+    }
+
+    /* email form (non-functional, only visual) */
+    .subscribe{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      max-width:520px;
+    }
+    .subscribe input[type="email"]{
+      flex:1;
+      padding:12px 14px;
+      border-radius:10px;
+      border:1px solid #e6e8ee;
+      outline:none;
+      font-size:14px;
+      background:linear-gradient(180deg, #fff, #fbfdff);
+    }
+    .subscribe button{
+      border:0;
+      padding:12px 16px;
+      border-radius:10px;
+      background:var(--blue);
+      color:white;
+      font-weight:700;
+      cursor:pointer;
+      min-width:120px;
+    }
+
+    .meta{
+      margin-top:18px;
+      display:flex;
+      gap:18px;
+      align-items:center;
+      color:var(--gray);
+      font-size:13px;
+    }
+
+    .dots{display:flex;gap:6px;align-items:center}
+    .dot{
+      width:8px;height:8px;border-radius:50%;background:var(--blue);
+      opacity:0.85; transform-origin:center; animation:blink 1s infinite ease-in-out;
+    }
+    .dot:nth-child(2){animation-delay:0.15s}
+    .dot:nth-child(3){animation-delay:0.3s}
+    @keyframes blink{0%{transform:translateY(0);opacity:0.25}50%{transform:translateY(-6px);opacity:1}100%{transform:translateY(0);opacity:0.25}}
+
+    /* horizontal logo for wider screens */
+    .logo-horizontal{display:none; align-items:center; gap:12px}
+    .logo-horizontal svg{height:42px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .card{grid-template-columns: 1fr; padding:20px}
+      .logo-box{width:120px;height:120px;min-width:120px;min-height:120px}
+      .logo-wrap{justify-content:flex-start}
+    }
+
+    @media (min-width:1200px){
+      .logo-wrap{display:none}
+      .logo-horizontal{display:flex}
+      .card{grid-template-columns:1fr; padding:36px 40px}
+      .content{order:2}
+      h1{font-size:36px}
+    }
+
+    footer.small{
+      margin-top:18px;
+      color:#9aa0ab;
+      font-size:12px;
+    }
+
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Estamos em Manutenção</h1>
-        <p>Desculpe pelo transtorno. Voltaremos em breve!</p>
-    </div>
+  <main class="card" role="main">
+    <!-- square logo block (shows on most screens) -->
+    <aside class="logo-wrap" aria-hidden="true">
+      <div class="logo-box">
+        <!-- SVG logo: infinite-style symbol with two arrows -->
+        <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#0b63d4" />
+              <stop offset="1" stop-color="#2b8cf7" />
+            </linearGradient>
+          </defs>
+          <rect width="88" height="88" rx="18" fill="none" />
+          <path d="M22 44C22 34.6112 29.6112 27 39 27C48.3888 27 56 34.6112 56 44C56 53.3888 48.3888 61 39 61C29.6112 61 22 53.3888 22 44Z" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M58 30L66 26L62 34" stroke="#0b63d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 58L10 62L14 54" stroke="#2b8cf7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div style="text-align:center">
+          <div class="brand-title">Infodraw<br/>Tecnologias</div>
+          <div class="brand-sub">Assistência técnica • Computadores & Notebooks</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- content -->
+    <section class="content">
+      <div class="logo-horizontal" role="img" aria-hidden="true">
+        <!-- horizontal variant shown on very wide screens -->
+        <svg width="160" height="44" viewBox="0 0 320 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hg" x1="0" x2="1">
+              <stop offset="0" stop-color="#0b63d4" />
+              <stop offset="1" stop-color="#2b8cf7" />
+            </linearGradient>
+          </defs>
+          <path d="M12 22C12 12.6112 19.6112 5 29 5C38.3888 5 46 12.6112 46 22C46 31.3888 38.3888 39 29 39C19.6112 39 12 31.3888 12 22Z" stroke="url(#hg)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M50 9L62 3L56 17" stroke="#0b63d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 35L-6 41L2 29" stroke="#2b8cf7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="84" y="29" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="18" fill="#071740">Infodraw <tspan font-weight="400">Tecnologias</tspan></text>
+        </svg>
+      </div>
+
+      <div class="coming">
+        <div style="flex:1">
+          <h1>Estamos chegando. Em breve online.</h1>
+          <p class="lead">A Infodraw Tecnologias está preparando uma nova presença — suporte e assistência técnica para computadores e notebooks. Enquanto isso, deixe seu e‑mail que avisaremos quando o site estiver no ar.</p>
+
+          <div class="subscribe" aria-label="assinatura">
+            <input type="email" placeholder="seu@email.com" aria-label="email" />
+            <button type="button">Avise-me</button>
+          </div>
+
+          <div class="meta">
+            <div class="status-pill">Lançamento: 2025</div>
+            <div class="dots" aria-hidden="true">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+
+          <footer class="small">© <strong>Infodraw Tecnologias</strong> — Assistência técnica de computadores e notebooks</footer>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
