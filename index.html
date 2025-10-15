@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Infodraw Tecnologias — Em Breve</title>
+  <meta name="description" content="Infodraw Tecnologias — Assistência técnica de computadores e notebooks. Em breve." />
+  <style>
+    :root{
+      --blue: #0b63d4;
+      --gray: #f0f4fa;
+      --bg-overlay: rgba(0,0,0,0.6);
+      --card-bg: rgba(255,255,255,0.12);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color: var(--gray);
+      background: url('background_infodraw.jpg') center center / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--bg-overlay);
+      z-index: 0;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      width: 100%;
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      border-radius: var(--radius);
+      padding: 40px 30px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .logo-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .logo-box img {
+      width: 180px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .brand-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      font-size: 15px;
+      color: #cfd6e0;
+      margin-top: 4px;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #ffffff;
+      margin-top: 30px;
+      margin-bottom: 12px;
+    }
+
+    p.lead {
+      color: #d7deeb;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+   .whatsapp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 12px 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .whatsapp-link:hover {
+      transform: scale(1.05);
+      background: #20ba57;
+    }
+
+    .whatsapp-link img {
+      width: 22px;
+      height: 22px;
+    }
+
+    footer.small {
+      margin-top: 30px;
+      color: #b6c0cf;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo-box">
+      <img src="logo_infodraw.png" alt="Logotipo Infodraw Tecnologias" />
+      <div class="brand-title"></div>
+      <div class="brand-sub">Assistência técnica • Computadores & Notebooks</div>
+    </div>
+
+    <h1>Estamos chegando. Em breve online.</h1>
+    <p class="lead">A Infodraw Tecnologias está preparando uma nova presença digital, suporte e assistência técnica especializada em computadores e notebooks. Chame no WhatsApp e seja avisado quando o site estiver disponível.</p>
+
+
+    <a class="whatsapp-link" href="https://wa.me/5551996650401" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      Fale conosco no WhatsApp
+    </a>
+
+    <footer class="small">© <strong>Infodraw Tecnologias</strong> — Assistência técnica de computadores e notebooks</footer>
+  </main>
+</body>
+</html>
