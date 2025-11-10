@@ -733,7 +733,7 @@ footer {
 }
 
 #plans::before {
-    background-image: url('imagens/servicos_infodraw.jpg');
+    background-image: url('imagens/planos_infodraw.jpg');
 }
 
 #contact::before {
@@ -956,3 +956,4 @@ footer {
     }
 
 }
+
