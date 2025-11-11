@@ -44,7 +44,7 @@ nav {
 }
 
 .logo {
-	margin-top: 8px !important; /* ← MUDA AQUI */
+	margin-top: 10px !important; /* ← MUDA AQUI */
 	font-size: 1.2rem;
 	font-weight: 500;
 	color: var(--primary-dark);
@@ -867,7 +867,7 @@ footer {
 
 @media (max-width: 992px) {
 	.logo {
-        margin-top: 8px !important; /* ← MUDA AQUI */
+        margin-top: 10px !important; /* ← MUDA AQUI */
 	}
 	.nav-links {
 		position: fixed;
@@ -1028,3 +1028,4 @@ footer {
 	}
 
 }
+
