@@ -37,7 +37,7 @@ header {
 nav {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding:  0.6rem;
+	padding:  0.3rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -127,7 +127,7 @@ nav {
 
 .menu-toggle {
 	display: none;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	cursor: pointer;
 	color: var(--primary-dark);
 }
@@ -1026,4 +1026,5 @@ footer {
 	.menu-toggle {
 		display: block !important;
 	}
+
 }
