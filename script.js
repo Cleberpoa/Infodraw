@@ -1,4 +1,28 @@
 // ========================================
+// 0. Botão comprar no whats
+// ========================================        
+document.addEventListener('DOMContentLoaded', function () {
+             console.log('DOM carregado! Botões encontrados:', document.querySelectorAll('.btn-buy').length);
+         
+             const buttons = document.querySelectorAll('.btn-buy');
+             if (buttons.length === 0) {
+                 console.warn('Nenhum botão .btn-buy encontrado! Verifique o HTML.');
+                 return;
+             }
+         
+             buttons.forEach(btn => {
+                 btn.addEventListener('click', function () {
+                     const nome = this.dataset.nome || 'Produto';
+                     const preco = this.dataset.preco || '0';
+                     const mensagem = `Olá! Quero comprar: *${nome}* por R$ ${preco}`;
+                     const url = `https://wa.me/5554999158595?text=${encodeURIComponent(mensagem)}`;
+                     
+                     window.open(url, '_blank');
+                     console.log('WhatsApp aberto:', nome, preco);
+                 });
+             });
+         });
+// ========================================
 // 1. MOBILE MENU: X VISÍVEL + SCROLL BLOQUEADO
 // ========================================
 const menuToggle = document.querySelector('.menu-toggle');
