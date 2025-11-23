@@ -495,6 +495,9 @@ footer{ background:rgba(0, 119, 182); padding:1rem 0; text-align:center; font-we
 /* =========================
    PROCESS HORIZONTAL (steps)
    ========================= */
+#como-funciona.section.section-lg {
+    padding: 30px 0 !important;
+}
 .process-horizontal{
   display:flex; align-items:center; justify-content:center; gap:2rem; flex-wrap:wrap; position:relative; margin:0 auto; max-width:1000px;
 }
@@ -555,4 +558,5 @@ footer{ background:rgba(0, 119, 182); padding:1rem 0; text-align:center; font-we
    ========================= */
 /* ensure nav sits above content */
 .nav-links{ z-index:999 }
+
 
