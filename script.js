@@ -1,6 +1,6 @@
-// seu-arquivo.js (main.js, scripts.js ou whatsapp-scroll.js)
-document.addEventListener('DOMContentLoaded', () => {
-    const body = document.body;   // ← agora funciona pro menu também
+(() => {
+    // Tudo que estava dentro do DOMContentLoaded agora vem aqui dentro
+    const body = document.body;
 
     // ========================================
     // 0. Botões Comprar no WhatsApp
@@ -116,4 +116,4 @@ if (botaoWhats && secaoServices) {
     verificar();
 }
 
-});
+})();
