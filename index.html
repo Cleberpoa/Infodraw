@@ -44,15 +44,49 @@
 
   <link rel="stylesheet" href="style.css">
 	
-	 <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-73V6V3Z3SH"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
-         
-         gtag('config', 'G-73V6V3Z3SH');
-      </script>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-73V6V3Z3SH"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+gtag('js', new Date());
+gtag('config', 'G-73V6V3Z3SH');
+
+
+// RASTREAR CLIQUES NO WHATSAPP
+document.addEventListener("click", function(e){
+  var link = e.target.closest("a");
+  if(link && link.href.includes("wa.me")){
+    gtag('event','click_whatsapp',{
+      event_category:'contato',
+      event_label:link.href
+    });
+  }
+});
+
+
+// RASTREAR CLIQUES EM TELEFONE
+document.addEventListener("click", function(e){
+  var link = e.target.closest("a");
+  if(link && link.href.startsWith("tel:")){
+    gtag('event','click_telefone',{
+      event_category:'contato',
+      event_label:link.href
+    });
+  }
+});
+
+
+// RASTREAR ENVIO DE FORMULÁRIO
+document.addEventListener("submit", function(e){
+  gtag('event','formulario_enviado',{
+    event_category:'contato'
+  });
+});
+
+</script>
 </head>
 <body>
 
@@ -1178,6 +1212,7 @@
 
 </body>
 </html>
+
 
 
 
