@@ -1371,8 +1371,8 @@
     /* ========== FLOATING BUTTONS ========== */
     .float-whatsapp {
       position: fixed;
-      bottom: 28px;
-      right: 28px;
+      bottom: 100px;
+      right: 29px;
       z-index: 5000;
       background: var(--green);
       color: #fff;
@@ -1401,8 +1401,8 @@
 
     .back-to-top {
       position: fixed;
-      bottom: 100px;
-      right: 28px;
+      bottom: 40px;
+      right: 35px;
       z-index: 5000;
       background: #fff;
       border: 1.5px solid var(--border);
