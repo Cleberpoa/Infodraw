@@ -1372,7 +1372,7 @@
     .float-whatsapp {
       position: fixed;
       bottom: 100px;
-      right: 29px;
+      right: 27px;
       z-index: 5000;
       background: var(--green);
       color: #fff;
@@ -1401,7 +1401,7 @@
 
     .back-to-top {
       position: fixed;
-      bottom: 40px;
+      bottom: 35px;
       right: 35px;
       z-index: 5000;
       background: #fff;
