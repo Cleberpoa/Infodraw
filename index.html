@@ -34,13 +34,7 @@
       <link rel="icon" type="image/x-icon" href="/imagens/favicon.ico">
       <link rel="icon" href="/favicon.png" type="image/png">
       <link rel="apple-touch-icon" href="/imagens/favicon.png">
-      <!-- ═══════════════════════════════════════════════════
-       SCHEMA MARKUP — LocalBusiness
-       Diz ao Google exatamente quem você é, onde fica,
-       o que faz, horário e avaliações.
-       Isso aparece nos resultados enriquecidos (estrelas,
-       horário, telefone direto no Google).
-       ═══════════════════════════════════════════════════ -->
+     
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,7 +71,7 @@
       { "@type": "City", "name": "Vila Flores" },
       { "@type": "City", "name": "Nova Prata" },
       { "@type": "City", "name": "Guaporé" },
-      { "@type": "AdministrativeArea", "name": "Serra Gaúcha" }
+      { "@type": "AdministrativeArea", "name": "Porto Alegre" }
     ],
     "openingHoursSpecification": [
       {
@@ -85,14 +79,8 @@
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
         "opens": "08:00",
         "closes": "18:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "08:00",
-        "closes": "12:00"
       }
-    ],
+       ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Serviços de Assistência Técnica em Informática",
@@ -111,6 +99,14 @@
             "@type": "Service",
             "name": "Remoção de Vírus e Malware",
             "description": "Limpeza profunda de vírus, ransomware, spyware e adware em computadores e notebooks."
+          }
+        },
+      {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Conserto de computador",
+            "description": "conserto e manutenção em computadores e notebooks."
           }
         },
         {
